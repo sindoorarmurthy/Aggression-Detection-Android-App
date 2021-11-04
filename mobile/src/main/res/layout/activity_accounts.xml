@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sindoora.tantrum.AccountsActivity">
+
+    <Button
+        android:id="@+id/btnLoginScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login Screen"
+        android:layout_alignBaseline="@+id/btnSignout"
+        android:layout_alignBottom="@+id/btnSignout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp" />
+
+    <Button
+        android:id="@+id/btnSignout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/errorColor"
+        android:text="Sign Out"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="447dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="39dp"
+        android:text="Name :" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnSignout"
+        android:layout_below="@+id/textView2"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Enter Age"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnSubmitAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextAge"
+        android:layout_alignBottom="@+id/editTextAge"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/editTextAge"
+        android:text="Submit" />
+
+    <EditText
+        android:id="@+id/editTextThreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editTextAge"
+        android:layout_below="@+id/btnSubmitAge"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="Enter Threshold"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnSubmitThreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editTextThreshold"
+        android:layout_marginLeft="25dp"
+        android:layout_toEndOf="@+id/editTextThreshold"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/btnUpdateDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnSignout"
+        android:layout_centerVertical="true"
+        android:text="Update DB" />
+
+</RelativeLayout>

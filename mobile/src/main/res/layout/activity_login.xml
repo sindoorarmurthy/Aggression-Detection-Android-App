@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/authui_colorPrimaryDark"
+    tools:context="com.sindoora.tantrum.LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/google_button"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/heartbeat"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="-34dp" />
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="Detection"
+        android:textColor="@color/authui_inputTextColor"
+        android:textSize="50sp"
+        android:typeface="sans"
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="286dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:fontFamily="monospace"
+        android:text="Aggression"
+        android:textColor="@color/authui_inputTextColor"
+        android:textSize="50sp"
+        android:typeface="sans"
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="286dp" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/google_button"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/loginDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Sign In to continue"
+        android:textColor="@color/authui_inputTextColor"
+        android:textSize="10sp"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="439dp"
+        android:layout_above="@+id/btnSkipLogin"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/google_button"
+        style="@style/FirebaseUI.Button.AccountChooser.GoogleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_above="@+id/loginDesc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:text="@string/sign_in_with_google"
+        tools:ignore="UnusedIds"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="384dp" />
+
+    <Button
+        android:id="@+id/btnSkipLogin"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toEndOf="@+id/imageView2"
+        android:onClick="skipLogin"
+        android:text="SKIP>"
+        android:textColor="@android:color/holo_orange_light"
+        tools:layout_editor_absoluteX="287dp"
+        tools:layout_editor_absoluteY="451dp" />
+
+    <TextView
+        android:id="@+id/textPatient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/google_button"
+        android:layout_below="@+id/header"
+        android:layout_marginRight="5dp"
+        android:layout_toStartOf="@+id/switch1"
+        android:gravity="center_vertical"
+        android:text="Patient"
+        android:textAllCaps="true"
+        android:textColor="@color/tw__solid_white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textDoctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/google_button"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@+id/switch1"
+        android:gravity="center_vertical"
+        android:text="Doctor"
+        android:textAllCaps="true"
+        android:textColor="@color/tw__solid_white"
+        android:textSize="18sp" />
+
+</RelativeLayout>

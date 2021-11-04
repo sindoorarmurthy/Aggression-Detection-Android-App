@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.sindoora.tantrum"
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+
+        // Required for 'com.firebaseui:firebase-ui:1.1.1'
+        maven {
+            url 'https://maven.fabric.io/public'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    wearApp project(':wear')
+    compile 'com.google.android.gms:play-services-wearable:11.0.4'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'me.denley.courier:courier:1.2.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.firebaseui:firebase-ui:1.2.0'
+    compile 'com.wang.avi:library:2.1.3'
+    compile 'com.google.firebase:firebase-auth:11.0.4'
+    compile 'com.google.firebase:firebase-analytics:11.0.4'
+    compile 'com.google.android.gms:play-services-auth:11.0.4'
+    compile 'com.google.firebase:firebase-database:11.0.4'
+    compile 'com.google.firebase:firebase-crash:11.0.4'
+    compile 'com.google.android.gms:play-services-gcm:11.0.4'
+    compile 'Teleport:teleportlib:0.1.4'
+    testCompile 'junit:junit:4.12'
+    apply plugin: 'com.google.gms.google-services'
+}
+
+
+
+

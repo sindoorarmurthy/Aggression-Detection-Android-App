@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tantrum</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_favorite">Account</string>
+</resources>
